@@ -13,7 +13,7 @@
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",
-    "webpack": "^4.1.1"
+    "webpack": "^3.10.10"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
@@ -24,6 +24,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "webpack",
     "webpack": "webpack --watch"
   },
   "repository": {
@@ -36,5 +37,8 @@
   "bugs": {
     "url": "https://github.com/rossmcarthur/TaskMaster/issues"
   },
-  "homepage": "https://github.com/rossmcarthur/TaskMaster#readme"
+  "homepage": "https://github.com/rossmcarthur/TaskMaster#readme",
+  "devDependencies": {
+    "webpack-cli": "^2.0.11"
+  }
 }
