@@ -1,5 +1,5 @@
 {
-  "name": "TaskMaster",
+  "name": "Chirp",
   "private": true,
   "dependencies": {
     "babel-core": "^6.26.0",
@@ -15,7 +15,7 @@
     "redux": "^3.7.2",
     "webpack": "^3.10.10"
   },
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "README",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -29,15 +29,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rossmcarthur/TaskMaster.git"
+    "url": "git+https://github.com/rossmcarthur/Chirp.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/rossmcarthur/TaskMaster/issues"
+    "url": "https://github.com/rossmcarthur/Chirp/issues"
   },
-  "homepage": "https://github.com/rossmcarthur/TaskMaster#readme",
+  "homepage": "https://github.com/rossmcarthur/Chirp#readme",
   "devDependencies": {
     "webpack-cli": "^2.0.11"
   }
