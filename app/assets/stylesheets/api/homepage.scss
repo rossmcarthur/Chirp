@@ -1,0 +1,27 @@
+.homepage {
+  font-family: 'IBM Plex Sans', sans-serif;
+  display: flex;
+  height: 100%
+}
+
+.home-left-page {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  background-image: image_url('chirp-home.jpeg');
+  background-size: cover;
+}
+
+.home-left-text-box {
+  margin: auto;
+  width: 50%;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.home-left-text {
+  margin-bottom: 40px;
+}

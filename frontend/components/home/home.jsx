@@ -41,10 +41,10 @@ sessionLinks() {
   return (
     <div className='homepage'>
       <div className='home-left-page'>
-        <div>
-          <p>Follow your curiosity.</p>
-          <p>Hear what people are saying.</p>
-          <p>Join in.</p>
+        <div className='home-left-text-box'>
+          <p className='home-left-text'><i className="fas fa-search"></i>&nbsp;&nbsp;&nbsp; Follow your curiosity.</p>
+          <p className='home-left-text'><i className="fas fa-quote-right"></i>&nbsp;&nbsp;&nbsp;See what people are saying.</p>
+          <p className='home-left-text'><i className="far fa-comment"></i>&nbsp;&nbsp;&nbsp;Join in.</p>
         </div>
       </div>
       <div className="home-login">
