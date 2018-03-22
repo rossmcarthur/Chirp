@@ -25,3 +25,112 @@
 .home-left-text {
   margin-bottom: 40px;
 }
+
+.homepage-right {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.home-login {
+  position: absolute;
+  top: 30px;
+  right: 200px;
+}
+
+.login-email {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  width: 170px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  color: grey;
+  outline: none;
+    &:focus {
+      border: 0.5px solid #1DA1F2;
+      color: lightgrey;
+    }
+}
+
+.login-password {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  width: 170px;
+  font-size: 15px;
+  border-radius: 3px;
+  outline: none;
+  color: grey;
+    &:focus {
+      border: 0.5px solid #1DA1F2;
+      color: lightgrey;
+    }
+}
+
+.login-submit {
+  border: 1px solid  #1DA1F2;
+  border-radius: 20px;
+  color:  #1DA1F2;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+    &:hover {
+      background: #dbf1ff;
+    }
+}
+
+.home-signup {
+  position: relative;
+}
+
+.signup-email {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  width: 170px;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  color: grey;
+  outline: none;
+    &:focus {
+      border: 0.5px solid #1DA1F2;
+      color: lightgrey;
+    }
+}
+
+.signup-password {
+  border: 1px solid lightgrey;
+  padding: 15px;
+  width: 170px;
+  font-size: 15px;
+  border-radius: 3px;
+  outline: none;
+  color: grey;
+    &:focus {
+      border: 0.5px solid #1DA1F2;
+      color: lightgrey;
+    }
+}
+
+.signup-submit {
+  border: 1px solid  #1DA1F2;
+  border-radius: 20px;
+  color: white;
+  background: #1DA1F2;
+  padding: 10px;
+  margin-left: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+    &:hover {
+      background: #dbf1ff;
+    }
+}
+
+.chirp-logo {
+  background-image: image_url('chirp.png')
+}

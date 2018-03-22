@@ -47,42 +47,49 @@ sessionLinks() {
           <p className='home-left-text'><i className="far fa-comment"></i>&nbsp;&nbsp;&nbsp;Join in.</p>
         </div>
       </div>
-      <div className="home-login">
-        <form>
-          <input
-            type='text'
-            className='login-email'
-            value={this.state.email}
-            placeholder='Email'
-            onChange={this.update('login', 'email')}
-            />
-          <input
-            type='password'
-            className='login-password'
-            value={this.state.password}
-            placeholder='Password'
-            onChange={this.update('login', 'password')}/>
-          <button className='login-submit' onClick={this.handleLogin}>Log in</button>
-        </form>
+      <div className='homepage-right'>
+        <div className="home-login">
+          <form>
+            <input
+              type='text'
+              className='login-email'
+              value={this.state.email}
+              placeholder='Email'
+              onChange={this.update('login', 'email')}
+              />
+            <input
+              type='password'
+              className='login-password'
+              value={this.state.password}
+              placeholder='Password'
+              onChange={this.update('login', 'password')}/>
+            <button className='login-submit' onClick={this.handleLogin}>Log in</button>
+          </form>
+        </div>
+        <div className='home-signup-text'>
+          <p className='chirp-logo'></p>
+          <p>See what's happening in the world right now</p>
+          <p>Join Chirp today.</p>
+          <div className='home-signup'>
+            <form>
+              <input
+                type='text'
+                className='signup-email'
+                value={this.state.email}
+                placeholder='Email'
+                onChange={this.update('signup', 'email')}
+                />
+              <input
+                type='password'
+                className='signup-password'
+                value={this.state.password}
+                placeholder='Password'
+                onChange={this.update('signup', 'password')}/>
+              <button className='signup-submit' onClick={this.handleSignup}>Get started</button>
+            </form>
+          </div>
+        </div>
       </div>
-    <div className='home-signup'>
-      <form>
-        <input
-          type='text'
-          className='signup-email'
-          value={this.state.email}
-          placeholder='Email'
-          onChange={this.update('signup', 'email')}
-          />
-        <input
-          type='password'
-          className='signup-password'
-          value={this.state.password}
-          placeholder='Password'
-          onChange={this.update('signup', 'password')}/>
-        <button className='signup-submit' onClick={this.handleSignup}>Get started</button>
-      </form>
-    </div>
 </div>
 );
 }
