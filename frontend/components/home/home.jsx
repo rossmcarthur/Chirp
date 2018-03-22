@@ -67,11 +67,11 @@ sessionLinks() {
           </form>
         </div>
         <div className='home-signup-text'>
-          <p className='chirp-logo'></p>
-          <p>See what's happening in the world right now</p>
-          <p>Join Chirp today.</p>
+          <img className='home-logo' src={window.staticImages.ChirpLogo} />
+          <p className='home-text1'>See what's happening in the world right now</p>
+          <p className='home-text2'>Join Chirp today.</p>
           <div className='home-signup'>
-            <form>
+            <form className='signup-form'>
               <input
                 type='text'
                 className='signup-email'

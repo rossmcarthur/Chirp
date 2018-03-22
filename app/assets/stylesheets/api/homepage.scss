@@ -29,17 +29,16 @@
 .homepage-right {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 0 auto 0 auto;
 }
 
 .home-login {
-  position: absolute;
+  position: relative;
   top: 30px;
-  right: 200px;
 }
 
 .login-email {
-  border: 1px solid lightgrey;
+  border: 1px solid #eaeaed;
   padding: 15px;
   width: 170px;
   font-size: 15px;
@@ -54,7 +53,7 @@
 }
 
 .login-password {
-  border: 1px solid lightgrey;
+  border: 1px solid #eaeaed;
   padding: 15px;
   width: 170px;
   font-size: 15px;
@@ -82,14 +81,14 @@
     }
 }
 
-.home-signup {
-  position: relative;
+.home-signup-text {
+  margin: auto;
 }
 
 .signup-email {
-  border: 1px solid lightgrey;
+  border: 1px solid #eaeaed;
   padding: 15px;
-  width: 170px;
+  width: 100%;
   font-size: 15px;
   border-radius: 3px;
   margin-right: 10px;
@@ -102,11 +101,13 @@
 }
 
 .signup-password {
-  border: 1px solid lightgrey;
+  border: 1px solid #eaeaed;
   padding: 15px;
-  width: 170px;
+  width: 100%;
   font-size: 15px;
   border-radius: 3px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   outline: none;
   color: grey;
     &:focus {
@@ -124,13 +125,35 @@
   margin-left: 10px;
   font-size: 15px;
   font-weight: 400;
+  width: 29%;
+  height: 10%;
   cursor: pointer;
-  transition: background-color 0.3s ease;
     &:hover {
-      background: #dbf1ff;
+      background: #014abf;
+      border: 1px solid #014abf;
     }
 }
 
-.chirp-logo {
-  background-image: image_url('chirp.png')
+.home-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.home-text1 {
+  font-size: 25px;
+  font-weight: 700;
+  width: 350px;
+  margin-top: 20px;
+}
+
+.home-text2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
 }
