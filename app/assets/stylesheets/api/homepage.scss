@@ -75,6 +75,7 @@
   font-size: 15px;
   font-weight: 400;
   cursor: pointer;
+  outline: none;
   transition: background-color 0.3s ease;
     &:hover {
       background: #dbf1ff;
@@ -127,6 +128,7 @@
   font-weight: 400;
   width: 29%;
   height: 10%;
+  outline: none;
   cursor: pointer;
     &:hover {
       background: #014abf;
@@ -156,4 +158,10 @@
 .signup-form {
   display: flex;
   flex-direction: column;
+}
+
+.errors-list {
+  list-style-type: none;
+  text-align: center;
+  color: red;
 }

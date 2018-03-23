@@ -36,6 +36,18 @@ class Home extends React.Component {
      });
   }
 
+  renderErrors() {
+    return(
+      <ul className="errors-list">
+        {this.props.errors.map((error, i) => (
+          <li key={`error-${i}`}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
 
 sessionLinks() {
   return (
@@ -79,6 +91,7 @@ sessionLinks() {
                 placeholder='Email'
                 onChange={this.update('signup', 'email')}
                 />
+              {this.renderErrors()}
               <input
                 type='password'
                 className='signup-password'
@@ -94,16 +107,18 @@ sessionLinks() {
 );
 }
 
-Welcome(currentUser, logout) {
-	<hgroup className="header-group">
-    <h2 className="header-name">Hi!</h2>
-    <button className="header-button" onClick={logout}>Log Out</button>
-	</hgroup>;
+welcome(currentUser, logout) {
+  return (
+  	<hgroup className="header-group">
+      <h2 className="header-name">Hi!</h2>
+      <button className="header-button" onClick={this.props.logout}>Log Out</button>
+  	</hgroup>
+  );
 }
 
 render() {
   return (
-    this.props.currentUser ? Welcome(this.props.currentUser, this.props.logout) : this.sessionLinks()
+    this.props.currentUser ? this.welcome(this.props.currentUser, this.props.logout) : this.sessionLinks()
   );
 }
 
