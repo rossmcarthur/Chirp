@@ -14,12 +14,10 @@ import {
 const App = () => (
   <div className='app-div'>
     <header className='app-header'>
-      <HomeContainer />
+      <Switch>
+        <AuthRoute exact path="/" component={HomeContainer} />
+      </Switch>
     </header>
-    <Switch>
-      <AuthRoute exact path="/" component={HomeContainer} />
-    </Switch>
-
   </div>
 );
 

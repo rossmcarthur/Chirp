@@ -48,8 +48,8 @@ class Home extends React.Component {
     );
   }
 
-
 sessionLinks() {
+  debugger
   return (
     <div className='homepage'>
       <div className='home-left-page'>
@@ -103,7 +103,7 @@ sessionLinks() {
           </div>
         </div>
       </div>
-</div>
+    </div>
 );
 }
 
