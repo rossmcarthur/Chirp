@@ -44,10 +44,12 @@
   font-size: 15px;
   border-radius: 3px;
   margin-right: 10px;
-  color: grey;
+  color: black;
   outline: none;
     &:focus {
       border: 0.5px solid #1DA1F2;
+    }
+    &::placeholder {
       color: lightgrey;
     }
 }
@@ -59,9 +61,11 @@
   font-size: 15px;
   border-radius: 3px;
   outline: none;
-  color: grey;
+  color: black;
     &:focus {
       border: 0.5px solid #1DA1F2;
+    }
+    &::placeholder {
       color: lightgrey;
     }
 }
@@ -93,10 +97,12 @@
   font-size: 15px;
   border-radius: 3px;
   margin-right: 10px;
-  color: grey;
+  color: black;
   outline: none;
     &:focus {
       border: 0.5px solid #1DA1F2;
+    }
+    &::placeholder {
       color: lightgrey;
     }
 }
@@ -110,9 +116,11 @@
   margin-top: 20px;
   margin-bottom: 20px;
   outline: none;
-  color: grey;
+  color: black;
     &:focus {
       border: 0.5px solid #1DA1F2;
+    }
+    &::placeholder {
       color: lightgrey;
     }
 }

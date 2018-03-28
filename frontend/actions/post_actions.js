@@ -1,0 +1,25 @@
+import * as PostAPIUtil from '../util/post_util';
+
+export const RECEIVE_POSTS = 'RECEIVE_POSTS';
+export const RECEIVE_POST = 'RECEIVE_POST';
+
+
+export const receivePosts = posts => {
+  return {
+    type: RECEIVE_POSTS,
+    posts
+  };
+};
+
+export const receivePost = post => {
+  return {
+    type: RECEIVE_POST,
+    post
+  };
+};
+
+export const fetchPosts = following => dispatch => {
+  return PostAPIUtil.fetchPosts(following).then(posts => {
+    return dispatch(receivePosts(posts));
+  });
+};
