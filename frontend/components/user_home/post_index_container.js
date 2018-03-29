@@ -1,23 +1,20 @@
 import { connect } from 'react-redux';
 import { fetchPosts } from '../../actions/post_actions';
-import { logout } from '../../actions/session_actions';
-import UserHome from './user_home';
-
+import PostIndex from './post_index';
 
 const mapStateToProps = state => {
   return {
-    currentUser: state.session.currentUser
+    posts: Object.values(state.entities.posts)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
-    fetchPosts: () => dispatch(fetchPosts()),
-    logout: () => dispatch(logout())
+    fetchPosts: () => dispatch(fetchPosts())
   };
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(UserHome);
+)(PostIndex);

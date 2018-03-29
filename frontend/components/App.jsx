@@ -1,5 +1,6 @@
 import React from 'react';
 import HomeContainer from './home/home_container';
+import UserHome from './user_home/user_home';
 import { Provider } from 'react-redux';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import {
@@ -15,7 +16,7 @@ const App = () => (
   <div className='app-div'>
     <header className='app-header'>
       <Switch>
-        <AuthRoute exact path="/" component={HomeContainer} />
+        <Route exact path="/" component={ HomeContainer } />
       </Switch>
     </header>
   </div>

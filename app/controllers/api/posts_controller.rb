@@ -10,12 +10,18 @@ class Api::PostsController < ApplicationController
   end
 
   def index
-    @posts = current_user.following.chirps
+    all_posts = [];
+    current_user.following.each do |user|
+      user.posts.each do |post|
+        all_posts.unshift(post)
+      end
+    end
+    @posts = all_posts
     render :index
   end
 
   def show
-    @post = Chirp.find_by(params[:id])
+    @post = Post.find_by(params[:id])
     render :show
   end
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import UserHomeContainer from '../user_home/user_home_container';
 
 class Home extends React.Component {
   constructor(props) {
@@ -7,12 +8,13 @@ class Home extends React.Component {
     this.state = {
       login: {
         email: '',
-        password: ''
+        password: '',
       },
       signup: {
         email: '',
-        password: ''
-      }
+        password: '',
+      },
+      errors: ''
     };
     this.handleLogin = this.handleLogin.bind(this);
     this.handleSignup = this.handleSignup.bind(this);
@@ -21,16 +23,22 @@ class Home extends React.Component {
   handleSignup(e) {
     e.preventDefault();
     this.props.signup(this.state.signup);
+    this.setState({
+      errors: 'signup'
+    });
   }
 
   handleLogin(e) {
     e.preventDefault();
     this.props.login(this.state.login);
+    this.setState({
+      errors: 'login'
+    });
   }
 
-  update(obj, field) {
+  update(form, field) {
     return e => this.setState({
-      [obj]: Object.assign({}, this.state[obj], {
+      [form]: Object.assign({}, this.state[form], {
          [field]: e.currentTarget.value,
        }),
      });
@@ -38,18 +46,17 @@ class Home extends React.Component {
 
   renderErrors() {
     return(
-      <ul className="errors-list">
-        {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
-            {error}
-          </li>
-        ))}
-      </ul>
+        <ul className="errors-list">
+          {this.props.errors.map((error, i) => (
+            <li key={`error-${i}`}>
+              {error}
+            </li>
+          ))}
+        </ul>
     );
   }
 
 sessionLinks() {
-  debugger
   return (
     <div className='homepage'>
       <div className='home-left-page'>
@@ -77,6 +84,7 @@ sessionLinks() {
               onChange={this.update('login', 'password')}/>
             <button className='login-submit' onClick={this.handleLogin}>Log in</button>
           </form>
+          {this.state.errors === 'login' ? this.renderErrors() : null}
         </div>
         <div className='home-signup-text'>
           <img className='home-logo' src={window.staticImages.ChirpLogo} />
@@ -91,7 +99,7 @@ sessionLinks() {
                 placeholder='Email'
                 onChange={this.update('signup', 'email')}
                 />
-              {this.renderErrors()}
+              {this.state.errors === 'signup' ? this.renderErrors() : null}
               <input
                 type='password'
                 className='signup-password'
@@ -104,21 +112,12 @@ sessionLinks() {
         </div>
       </div>
     </div>
-);
-}
-
-welcome(currentUser, logout) {
-  return (
-  	<hgroup className="header-group">
-      <h2 className="header-name">Hi!</h2>
-      <button className="header-button" onClick={this.props.logout}>Log Out</button>
-  	</hgroup>
   );
 }
 
 render() {
   return (
-    this.props.currentUser ? this.welcome(this.props.currentUser, this.props.logout) : this.sessionLinks()
+    this.props.currentUser ? <UserHomeContainer /> : this.sessionLinks()
   );
 }
 

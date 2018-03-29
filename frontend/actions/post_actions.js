@@ -18,8 +18,8 @@ export const receivePost = post => {
   };
 };
 
-export const fetchPosts = following => dispatch => {
-  return PostAPIUtil.fetchPosts(following).then(posts => {
+export const fetchPosts = () => dispatch => {
+  return PostAPIUtil.fetchPosts().then(posts => {
     return dispatch(receivePosts(posts));
   });
 };
