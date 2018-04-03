@@ -1,0 +1,23 @@
+.user-home-page {
+  display: grid;
+  grid-template-columns: .5fr 1fr .5fr;
+  grid-template-rows: auto auto 1fr 1fr 1fr auto auto;
+  background-color: #E6ECF0;
+  width: auto;
+  height: 100%;
+}
+
+.post-list-index {
+  grid-column-start: 2;
+  background-color: white;
+}
+
+.logout-button {
+  grid-column-start: 2;
+}
+
+.post-content {
+  list-style: none;
+  border: 1px solid lightgrey;
+  border-top: none;
+}

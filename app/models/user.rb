@@ -65,4 +65,10 @@ class User < ApplicationRecord
     self.following.count
   end
 
+  def display_name
+    name = '@'
+    name << self[:email].split('@')[0]
+    name
+  end
+
 end

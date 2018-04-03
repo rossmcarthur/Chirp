@@ -3,7 +3,6 @@ import PostIndexItem from './post_index_item';
 
 class PostIndex extends React.Component {
   render() {
-    debugger
     const posts = this.props.posts.map(post => {
       return (
         <PostIndexItem
@@ -13,7 +12,7 @@ class PostIndex extends React.Component {
       );
     });
     return (
-      <div className='post-list'>
+      <div className='post-list-index'>
         { posts }
       </div>
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexContainer from './post_index_container';
+import Navbar from '../navbar/navbar';
 
 
 class UserHome extends React.Component {
@@ -13,9 +14,11 @@ class UserHome extends React.Component {
 
   render() {
     return(
-      <div className='user-home-page'>
-        <button className="header-button" onClick={this.props.logout}>Log Out</button>
-        <PostIndexContainer />
+      <div>
+        <Navbar />
+        <div className='user-home-page'>
+          <PostIndexContainer />
+        </div>
       </div>
     );
   }
