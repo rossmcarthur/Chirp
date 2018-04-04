@@ -1,9 +1,9 @@
-export const OPEN_MODAL = 'OPEN_MODAL';
+export const POST_CREATE_MODAL = 'POST_CREATE_MODAL';
 export const CLOSE_MODAL = 'CLOSE_MODAL';
 
-export const openModal = () => {
+export const postCreateModal = () => {
   return {
-    type: OPEN_MODAL
+    type: POST_CREATE_MODAL
   };
 };
 

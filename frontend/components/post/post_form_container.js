@@ -5,6 +5,6 @@ import PostForm from './post_form';
 const mapStateToProps = state => {
   return {
     currentUser: state.session.currentUser,
-    
+    userHomeModal: state.ui.modals.user_home_modal
   };
 };

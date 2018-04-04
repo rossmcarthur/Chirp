@@ -1,17 +1,21 @@
 import merge from 'lodash/merge';
 import {
-  OPEN_MODAL,
+  POST_CREATE_MODAL,
   CLOSE_MODAL
 } from '../actions/ui_actions';
 
-const modalReducer = (state = false, action) => {
+const initialState = {
+  session_modal: null
+};
+
+const modalReducer = (state = initialState, action) => {
   switch(action.type) {
-    case OPEN_MODAL:
-      return merge({}, state, { modal: true });
+    case POST_CREATE_MODAL:
+    return merge({}, state, { user_home_modal: 'post_create' });
     case CLOSE_MODAL:
-      return merge({}, state, { modal: false });
+    return initialState;
     default:
-      return state;
+    return state;
   }
 };
 
