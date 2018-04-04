@@ -14,7 +14,7 @@ class UserHome extends React.Component {
 
   render() {
     return(
-      <div>
+      <div className='full-user-home-page'>
         <Navbar />
         <div className='user-home-page'>
           <PostIndexContainer />

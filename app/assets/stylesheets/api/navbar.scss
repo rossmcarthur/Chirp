@@ -13,6 +13,9 @@
 
 .right-nav-links {
   display: flex;
+  margin-right: 120px;
+  height: 49px;
+  align-items: center;
 }
 
 .dropdown-full {
@@ -32,4 +35,37 @@
 .dropdown-logout {
   outline: none;
   border: none;
+}
+
+.home-button {
+  outline: none;
+  color: #2AA3EF;
+  border: none;
+  border-bottom: 3px solid white;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 120px;
+  height: 49px;
+    &:hover{
+      border-bottom: 3px solid #2AA3EF;
+    }
+}
+
+.post-button {
+  border: 1px solid  #50B4F2;
+  border-radius: 20px;
+  color: white;
+  background: #50B4F2;
+  margin-left: 10px;
+  font-weight: 700;
+  height: 35px;
+  width: 60px;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+    &:hover {
+      background: #2AA3Ef;
+      border: 1px solid #2AA3Ef;
+    }
 }

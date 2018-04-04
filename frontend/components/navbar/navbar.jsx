@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className='navbar-container'>
       <Link to='/'>
-        <button className='home-button'>Home</button>
+        <button className='home-button'><i className="fas fa-home"></i>Home</button>
       </Link>
       <Link to='/'>
         <img className='user-home-logo' src={window.staticImages.ChirpLogo} />
