@@ -23,3 +23,9 @@ export const fetchPosts = () => dispatch => {
     return dispatch(receivePosts(posts));
   });
 };
+
+export const createPost = post => dispatch => {
+  return PostAPIUtil.createPost(post).then(post => {
+    return dispatch(receivePost(post));
+  });
+};
