@@ -5,7 +5,7 @@ import {
 } from '../actions/ui_actions';
 
 const initialState = {
-  session_modal: null
+  user_home_modal: null
 };
 
 const modalReducer = (state = initialState, action) => {
