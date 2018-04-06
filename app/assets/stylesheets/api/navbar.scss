@@ -30,11 +30,19 @@
   outline: none;
   border: none;
   border-bottom: 1px solid black;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
 .dropdown-logout {
   outline: none;
   border: none;
+  cursor: pointer;
 }
 
 .home-button {

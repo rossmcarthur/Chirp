@@ -43,6 +43,8 @@ group :development, :test do
   gem 'annotate'
   gem 'bcrypt'
   gem 'jquery-rails'
+  gem 'aws-sdk', '< 3.0'
+  gem "paperclip", '~> 5.0.0'
 end
 
 group :development do

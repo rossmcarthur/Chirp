@@ -1,6 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
+import onClickOutside from "react-onclickoutside";
+
+const mapStateToProps = state => {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -16,6 +23,13 @@ class Dropdown extends React.Component {
     };
     this.handleLogout = this.handleLogout.bind(this);
     this.handleShow = this.handleShow.bind(this);
+    this.handleClickOutside = this.handleClickOutside.bind(this);
+  }
+
+  handleClickOutside() {
+    return (
+      this.state.show ? this.handleShow() : null
+    );
   }
 
   handleLogout() {
@@ -40,7 +54,7 @@ class Dropdown extends React.Component {
   render() {
     return (
       <div>
-      <button className='user-dropdown' onClick={this.handleShow}> PHOTO </button>
+      <img className='user-dropdown' src={this.props.currentUser.image_url} onClick={this.handleShow} />
       {this.state.show ? this.dropdownShow() : null}
     </div>
   );
@@ -48,4 +62,4 @@ class Dropdown extends React.Component {
 
 }
 
-export default connect(null, mapDispatchToProps)(Dropdown);
+export default connect(mapStateToProps, mapDispatchToProps)(onClickOutside((Dropdown)));

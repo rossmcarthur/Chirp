@@ -9,7 +9,9 @@ class PostForm extends React.Component {
     };
   }
 
-  
+  update(field) {
+    
+  }
 }
 
 export default PostForm;

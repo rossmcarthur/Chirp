@@ -24,7 +24,11 @@ class Home extends React.Component {
     e.preventDefault();
     this.props.signup(this.state.signup);
     this.setState({
-      errors: 'signup'
+      errors: 'signup',
+      signup: {
+        email: '',
+        password: ''
+      }
     });
   }
 
@@ -32,7 +36,11 @@ class Home extends React.Component {
     e.preventDefault();
     this.props.login(this.state.login);
     this.setState({
-      errors: 'login'
+      errors: 'login',
+      login: {
+        email: '',
+        password: ''
+      }
     });
   }
 
