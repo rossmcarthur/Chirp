@@ -1,10 +1,10 @@
 .user-home-page {
   display: grid;
-  grid-template-columns: .5fr 1fr .5fr;
+  grid-template-columns: auto 600px auto;
   grid-template-rows: auto auto 1fr 1fr 1fr auto auto;
   background-color: #E6ECF0;
-  width: auto;
   height: 100%;
+  overflow: auto;
 }
 
 .full-user-home-page {
@@ -14,7 +14,40 @@
 .post-list-index {
   grid-column-start: 2;
   background-color: white;
-  margin-top: 15px;
+  border-top: 10px solid #E6ECF0;
+}
+
+.post-shortcut-container {
+  grid-column-start: 2;
+  background: #E9F5FD;
+  width: auto;
+  height: 38px;
+  padding: 10px;
+}
+
+.post-shortcut-activate {
+  height: 20px;
+  width: 515px;
+  position: relative;
+  padding: 8px;
+  top: -7px;
+  border: 1px solid #C7E7FA;
+  border-radius: 5px;
+  outline: none;
+    &::placeholder {
+      color: #41ADF1;
+    }
+}
+
+.post-index-item {
+  cursor: pointer;
+}
+
+.post-shortcut-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 12px;
 }
 
 .logout-button {
@@ -23,8 +56,7 @@
 
 .post-content {
   list-style: none;
-  border: 1px solid lightgrey;
-  border-top: none;
+  border-bottom: 1px solid lightgrey;
 }
 
 .post-form-box {
@@ -137,5 +169,33 @@
     &:hover:enabled {
       background: #2AA3Ef;
       border: 1px solid #2AA3Ef;
+    }
+}
+
+.post-form-box-shortcut {
+  text-align: center;
+  width: auto;
+  height: auto;
+  background-color: #E9F6FD;
+  grid-column-start: 2;
+}
+
+.post-body-section-shortcut {
+  display: flex;
+  padding-top: 10px;
+}
+
+.post-create-body-shortcut {
+  height: 64px;
+  width: 515px;
+  border: 2px solid #A6DAF8;
+  border-radius: 10px;
+  outline: none;
+  resize: none;
+  padding: 8px;
+  margin-right: 10px;
+  font-size: 14px;
+    &::placeholder {
+      color: lightgrey;
     }
 }

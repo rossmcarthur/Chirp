@@ -1,5 +1,5 @@
 @posts.each do |post|
   json.set! post.id do
-    json.partial! 'posts', post: post
+    json.partial! 'post', post: post
   end
 end

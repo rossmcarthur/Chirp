@@ -16,6 +16,9 @@ class Api::PostsController < ApplicationController
         all_posts.unshift(post)
       end
     end
+    current_user.posts.each do |post|
+      all_posts.unshift(post)
+    end
     @posts = all_posts
     render :index
   end
