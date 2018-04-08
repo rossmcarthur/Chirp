@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  validates :email, :session_token, presence: true
-  validates :email, uniqueness: true
+  validates :email, :session_token, :username, presence: true
+  validates :email, :username, uniqueness: true
   validates :password, length: { minimum: 6, allow_nil: true }
   has_attached_file :image, default_url: "default-user.png"
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/

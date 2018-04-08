@@ -107,6 +107,24 @@
     }
 }
 
+.signup-username {
+  border: 1px solid #eaeaed;
+  padding: 15px;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 15px;
+  border-radius: 3px;
+  margin-right: 10px;
+  color: black;
+  outline: none;
+    &:focus {
+      border: 0.5px solid #1DA1F2;
+    }
+    &::placeholder {
+      color: lightgrey;
+    }
+}
+
 .signup-password {
   border: 1px solid #eaeaed;
   padding: 15px;

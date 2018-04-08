@@ -8,11 +8,12 @@ class Home extends React.Component {
     this.state = {
       login: {
         email: '',
-        password: '',
+        password: ''
       },
       signup: {
         email: '',
         password: '',
+        username: ''
       },
       errors: ''
     };
@@ -27,7 +28,8 @@ class Home extends React.Component {
       errors: 'signup',
       signup: {
         email: '',
-        password: ''
+        password: '',
+        username: ''
       }
     });
   }
@@ -80,14 +82,14 @@ sessionLinks() {
             <input
               type='text'
               className='login-email'
-              value={this.state.email}
+              value={this.state.login.email}
               placeholder='Email'
               onChange={this.update('login', 'email')}
               />
             <input
               type='password'
               className='login-password'
-              value={this.state.password}
+              value={this.state.login.password}
               placeholder='Password'
               onChange={this.update('login', 'password')}/>
             <button className='login-submit' onClick={this.handleLogin}>Log in</button>
@@ -103,15 +105,22 @@ sessionLinks() {
               <input
                 type='text'
                 className='signup-email'
-                value={this.state.email}
+                value={this.state.signup.email}
                 placeholder='Email'
                 onChange={this.update('signup', 'email')}
+                />
+              <input
+                type='text'
+                className='signup-username'
+                value={this.state.signup.username}
+                placeholder='Username'
+                onChange={this.update('signup', 'username')}
                 />
               {this.state.errors === 'signup' ? this.renderErrors() : null}
               <input
                 type='password'
                 className='signup-password'
-                value={this.state.password}
+                value={this.state.signup.password}
                 placeholder='Password'
                 onChange={this.update('signup', 'password')}/>
               <button className='signup-submit' onClick={this.handleSignup}>Get started</button>

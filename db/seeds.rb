@@ -9,9 +9,9 @@
  Relationship.destroy_all
  Post.destroy_all
 
-user1 = User.create!(email: 'ross@gmail.com' , password: 'whatever')
-user2 = User.create!(email: 'matt@gmail.com', password: 'whatever')
-user3 = User.create!(email: 'warlin@gmail.com', password: 'whatever')
+user1 = User.create!(email: 'ross@gmail.com' , password: 'whatever', username: 'DaMan')
+user2 = User.create!(email: 'matt@gmail.com', password: 'whatever', username: 'WhoDis?')
+user3 = User.create!(email: 'warlin@gmail.com', password: 'whatever', username: 'YaBoi')
 
 relationship1 = Relationship.create!(follower_id: user1.id, followed_id: user3.id)
 
