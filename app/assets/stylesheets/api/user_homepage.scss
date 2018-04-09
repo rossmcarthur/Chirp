@@ -10,3 +10,11 @@
 .full-user-home-page {
   height: 100%
 }
+
+.first-grid-container {
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  height: auto;
+  border-right: 10px solid #E6ECF0;
+}

@@ -1,7 +1,8 @@
 import React from 'react';
-import PostIndexContainer from './post_index_container';
+import PostIndexContainer from '../post/post_index_container';
 import Navbar from '../navbar/navbar';
 import PostFormContainer from '../post/post_form_container';
+import DashboardProfile from './dashboard_profile';
 
 
 class UserHome extends React.Component {
@@ -19,6 +20,9 @@ class UserHome extends React.Component {
         <Navbar />
         <PostFormContainer />
         <div className='user-home-page'>
+          <div className='first-grid-container'>
+            <DashboardProfile />
+          </div>
           <PostIndexContainer />
         </div>
       </div>

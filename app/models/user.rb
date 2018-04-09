@@ -29,6 +29,11 @@ class User < ApplicationRecord
     through: :passive_relationships,
     source: :follower
 
+  has_many :photos,
+    class_name: :Photo,
+    foreign_key: :user_id,
+    dependent: :destroy
+
   after_initialize :ensure_session_token
 
   def self.find_by_credentials(email, password)
@@ -57,20 +62,6 @@ class User < ApplicationRecord
     self.session_token = SecureRandom.urlsafe_base64
     self.save!
     self.session_token
-  end
-
-  def followers_count
-    self.followers.count
-  end
-
-  def following_count
-    self.following.count
-  end
-
-  def display_name
-    name = '@'
-    name << self[:email].split('@')[0]
-    name
   end
 
 end

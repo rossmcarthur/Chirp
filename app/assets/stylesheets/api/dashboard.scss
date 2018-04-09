@@ -1,0 +1,26 @@
+.dashboard-user-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.dashboard-profile-container {
+  background: white;
+  height: 212px;
+  width: 288px;
+  border-top: 10px solid #E6ECF0;
+  grid-column-start: 1;
+}
+
+.dashboard-chirps-list {
+  list-style: none;
+}
+
+.dashboard-following-list {
+  list-style: none;
+}
+
+.dashboard-followers-list {
+  list-style: none;
+}
