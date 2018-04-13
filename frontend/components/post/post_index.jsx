@@ -1,5 +1,6 @@
 import React from 'react';
 import PostIndexItem from './post_index_item';
+import PostShowContainer from './post_show_container';
 import onClickOutside from "react-onclickoutside";
 
 class PostIndex extends React.Component {
@@ -29,6 +30,7 @@ class PostIndex extends React.Component {
       body: ''
     });
   }
+
 
   toggleShortcut() {
     return (

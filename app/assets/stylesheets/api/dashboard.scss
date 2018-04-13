@@ -6,6 +6,7 @@
 }
 
 .dashboard-profile-container {
+  position: relative;
   background: white;
   height: 212px;
   width: 288px;
@@ -13,14 +14,60 @@
   grid-column-start: 1;
 }
 
+.dashboard-information {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  margin: 0 10px 10px 10px;
+  width: 93%;
+  justify-content: space-between;
+}
+
+.dashboard-username {
+  font-family: 'IBM Plex Sans', sans-serif;
+  cursor: pointer;
+  width: auto;
+  border-bottom: 1px solid white;
+  &:hover {
+    border-bottom: 1px solid black;
+  }
+}
+
 .dashboard-chirps-list {
   list-style: none;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  &:hover {
+    color: #55B5F0;
+  }
+}
+
+.dashboard-chirps-count {
+  color: #55B5F0;
 }
 
 .dashboard-following-list {
   list-style: none;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  &:hover {
+    color: #55B5F0;
+  }
+}
+
+.dashboard-following-count {
+  color: #55B5F0;
 }
 
 .dashboard-followers-list {
   list-style: none;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+  &:hover {
+    color: #55B5F0;
+  }
+}
+
+.dashboard-followers-count {
+  color: #55B5F0;
 }

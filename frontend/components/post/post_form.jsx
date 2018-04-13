@@ -42,7 +42,7 @@ class PostForm extends React.Component {
   }
 
   render() {
-    if (this.props.userHomeModal) {
+    if (this.props.userHomeModal === 'post_create') {
       return (
         <div onClick={this.handleCloseModal} className="modal-window">
         <div onClick={this.stopPropagation} className="post-form-container">
