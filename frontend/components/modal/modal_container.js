@@ -3,7 +3,6 @@ import { closeModal } from '../../actions/ui_actions';
 import Modal from './modal';
 
 const mapStateToProps = state => {
-  debugger
   return {
     component: state.ui.modals.component,
     currentUser: state.session.currentUser

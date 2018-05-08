@@ -4,7 +4,7 @@ import PostShow from './post_show';
 
 const mapStateToProps = state => {
   return {
-    userHomeModal: state.ui.modals.userHomeModal
+    currentUser: state.session.currentUser
   };
 };
 

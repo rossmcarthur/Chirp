@@ -1,6 +1,104 @@
 .post-show-container {
   margin: auto;
   width: 500px;
-  height: 500px;
+  height: auto;
   background: white;
+  border-radius: 10px;
+}
+
+// .login-submit {
+//   border: 1px solid  #1DA1F2;
+//   border-radius: 20px;
+//   color:  #1DA1F2;
+//   padding: 10px;
+//   margin-left: 10px;
+//   font-size: 15px;
+//   font-weight: 400;
+//   cursor: pointer;
+//   outline: none;
+// }
+
+.post-show-following {
+  border: 1px solid  #50B4F2;
+  border-radius: 20px;
+  color: white;
+  background: #50B4F2;
+  margin-left: 10px;
+  font-weight: 700;
+  height: 35px;
+  width: 100px;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+
+.post-show-user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.post-show-content {
+  padding: 20px;
+}
+
+.post-show-header {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+}
+
+.post-show-author {
+  position: relative;
+  top: 25%;
+  font-size: 15px;
+  font-weight: 700;
+  font-family: 'IBM Plex Sans', sans-serif;
+  padding-left: 8px;
+  list-style: none;
+  color: black;
+  border-bottom: 1px solid white;
+    &:hover {
+      color: #2AA3EF;
+      border-bottom: 1px solid #2AA3EF;
+    }
+}
+
+.post-show-user {
+  display: flex;
+}
+
+.post-show-text {
+  list-style: none;
+}
+
+.post-show-body {
+  font-size: 25px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  margin: 0 0 20px 5px;
+}
+
+.post-show-date {
+  font-family: 'IBM Plex Sans', sans-serif;
+  color: #768692;
+  margin: 0 0 10px 5px;
+  font-size: 13px;
+}
+
+#show-comment {
+  margin: 10px 60px 10px 5px;
+  color: #657785;
+  cursor: pointer;
+    &:hover {
+      color: #2AA3EF;
+    }
+}
+
+#show-like {
+  margin: 10px 0 10px 0;
+  color: #657785;
+  cursor: pointer;
+    &:hover {
+      color: #E55C72;
+    }
 }

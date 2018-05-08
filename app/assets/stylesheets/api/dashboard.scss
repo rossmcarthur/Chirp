@@ -26,7 +26,7 @@
 .dashboard-username {
   font-family: 'IBM Plex Sans', sans-serif;
   cursor: pointer;
-  width: auto;
+  display: inline-block;
   border-bottom: 1px solid white;
   &:hover {
     border-bottom: 1px solid black;

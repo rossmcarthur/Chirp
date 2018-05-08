@@ -7,7 +7,6 @@ class Modal extends React.Component {
 
   render() {
   if (this.props.component) {
-    debugger
     return(
       <div className='modal-window' onClick={this.props.closeModal}>
         <div onClick={this.stopPropagation} className="modal-conatiner">

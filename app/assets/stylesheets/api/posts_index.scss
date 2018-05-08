@@ -8,6 +8,9 @@
   display: grid;
   cursor: pointer;
   grid-template-columns: 1fr 11fr;
+    &:hover {
+      background: #F5F8FA;
+    }
 }
 
 .post-content {
@@ -32,11 +35,17 @@
 .post-author {
   font-weight: 700;
   border-bottom: 1px solid white;
+  color: black;
+  text-decoration: none;
     &:hover {
       color: #2AA3EF;
       border-bottom: 1px solid #2AA3EF;
     }
 }
+
+  a {
+    text-decoration: none;
+  }
 
 .post-moment {
   font-weight: 100;
