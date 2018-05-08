@@ -1,19 +1,19 @@
 import { connect } from 'react-redux';
-import { postCreateModal, closeModal } from '../../actions/ui_actions';
+import { postShowModal, closeModal } from '../../actions/ui_actions';
 import { createPost } from '../../actions/post_actions';
 import PostForm from './post_form';
 
 const mapStateToProps = state => {
   return {
     currentUser: state.session.currentUser,
-    userHomeModal: state.ui.modals.user_home_modal
+    modal: Boolean(state.ui.modals.component)
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
     createPost: post => dispatch(createPost(post)),
-    postCreateModal: () => dispatch(postCreateModal()),
+    postShowModal: component => dispatch(postShowModal(component)),
     closeModal: () => dispatch(closeModal())
   };
 };

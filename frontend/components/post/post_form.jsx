@@ -9,7 +9,6 @@ class PostForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleCloseModal = this.handleCloseModal.bind(this);
-    this.handleCreateModal = this.handleCreateModal.bind(this);
   }
 
   update(field) {
@@ -18,17 +17,9 @@ class PostForm extends React.Component {
     });
   }
 
-  handleCreateModal(e) {
-    this.props.postCreateModal();
-  }
-
   handleCloseModal(e) {
     this.props.closeModal();
     this.setState({ body: '' });
-  }
-
-  stopPropagation(e) {
-    e.stopPropagation();
   }
 
   handleSubmit(e) {
@@ -42,10 +33,9 @@ class PostForm extends React.Component {
   }
 
   render() {
-    if (this.props.userHomeModal === 'post_create') {
+    if (this.props.modal) {
       return (
-        <div onClick={this.handleCloseModal} className="modal-window">
-        <div onClick={this.stopPropagation} className="post-form-container">
+        <div className='post-form-container'>
         <form onSubmit={this.handleSubmit} className="post-form-box">
           <div className='post-create-header'>
             <p className='post-create-header-text'>Compose new Chirp</p>
@@ -65,8 +55,7 @@ class PostForm extends React.Component {
               <button className='post-submit' disabled={this.state.body === ''} onClick={this.handleSubmit}>Chirp</button>
             </div>
           </form>
-        </div>
-      </div>
+          </div>
       );
     } else {
       return null;

@@ -32,26 +32,30 @@
 }
 
 .modal-window {
-  position: absolute;
+  position: fixed;
   z-index: 5;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: space-between;
   background-color: rgba(0, 0, 0, 0.6);
-  top: 0;
-  left: 0;
+
   overflow: scroll;
+}
+
+.modal-conatiner {
+  margin: 40px auto auto auto;
 }
 
 .post-form-container {
   text-align: center;
-  margin: 40px auto auto auto;
   width: 610px;
   height: 208px;
   background-color: #E9F6FD;
   z-index: 4;
   border-radius: 10px;
+  position: relative;
+  top: 40px;
 }
 
 .post-create-image {

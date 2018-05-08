@@ -4,8 +4,8 @@ import { fetchUser } from '../../actions/user_actions';
 import Profile from './profile';
 
 const mapStateToProps = (state, ownProps) => {
-  debugger
   const username = ownProps.match.params.username;
+  debugger
   return {
     currentUser: state.session.currentUser,
     username: username

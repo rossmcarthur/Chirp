@@ -1,4 +1,5 @@
 import React from 'react';
+import Modal from './modal/modal_container';
 import HomeContainer from './home/home_container';
 import UserHome from './user_home/user_home';
 import ProfileContainer from './profile/profile_container';
@@ -16,6 +17,7 @@ import {
 const App = () => (
   <div className='app-div'>
     <header className='app-header'>
+      <Modal />
       <Switch>
         <Route exact path='/users/:username' component= { ProfileContainer } />
         <Route exact path="/" component={ HomeContainer } />
@@ -25,5 +27,3 @@ const App = () => (
 );
 
 export default App;
-
-        // <Route path="/users/:username" component={ ProfileContainer } />

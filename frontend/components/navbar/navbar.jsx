@@ -1,12 +1,23 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { postCreateModal, closeModal } from '../../actions/ui_actions';
+import { showModal, closeModal } from '../../actions/ui_actions';
+import { createPost } from '../../actions/post_actions';
+import PostForm from '../post/post_form';
+import Modal from '../modal/modal_container';
 import Dropdown from './dropdown';
+
+const mapStateToProps = state => {
+  return {
+    currentUser: state.session.currentUser
+  };
+};
 
 const mapDispatchToProps = dispatch => {
   return {
-    postCreateModal: () => dispatch(postCreateModal())
+    showModal: component => dispatch(showModal(component)),
+    closeModal: () => dispatch(closeModal()),
+    createPost: post => dispatch(createPost(post))
   };
 };
 
@@ -17,7 +28,9 @@ class Navbar extends React.Component  {
   }
 
   handlePostModal() {
-    this.props.postCreateModal();
+    this.props.showModal(
+      <PostForm currentUser={this.props.currentUser} modal={true} closeModal={this.props.closeModal} createPost={this.props.createPost} />
+    );
   }
 
   render() {
@@ -39,6 +52,6 @@ class Navbar extends React.Component  {
 }
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
   )(Navbar);
